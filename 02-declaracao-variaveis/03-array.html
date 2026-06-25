@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Manipulação de array</h1>  
+    
+    <script>
+        //declaração 
+
+        let frutas = ["maçã", "banana", "laranja"];
+
+        //
+        document.write('Elementos da array: ');
+        document.write(frutas);
+        document.write('<br>');
+
+
+        //Retornar um elemento do array nomeArray[indice]
+        let segundoElemento = frutas[1];
+
+        document.write(`Segundo elemento da array: ${segundoElemento} <br>`);
+
+        //Alterar um valor nomeArray[indice] = novoValor
+        frutas[1] = 'goiaba';
+        document.write(`O array frutas possui ${frutas.length} elementos <br>`);
+
+        //Adiciona um elemento no final da array nomeArray.push(novoItem)
+        frutas.push("uva");
+        document.write(`Agora o array frutas possui ${frutas.length} elementos ${frutas} <br>`)
+
+        //Adiciona um elemento em uma posição específica
+        //nomeArray.splice(posição, qtdeRemover, novoItem1, novoItem2,...)
+        //qtdeRemover: O número de elementos a serem removidos a partir da posição especificada(se for 0, nenhum elemento será removido).
+        frutas.splice(3,0,'banana');
+        document.write(`Agora o array frutas possui ${frutas.length} elementos ${frutas}<br>`);
+
+        //Remove o último elemento de um array nomeArray.pop().
+        let frutaRemovida = frutas.pop();
+        document.write(`Elemento removido ${frutaRemovida}. Frutas possui ${frutas.length} elementos <br>`);
+
+        //Remove um elemento em uma posição específica nomeArray.splice(posição, qtdeRemover)
+        frutas.splice(1,2);
+        document.write(`Frutas possui ${frutas.length} elementos: ${frutas} <br>`);
+
+
+    </script>
+</body>
+</html>
